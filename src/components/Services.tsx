@@ -44,10 +44,10 @@ const Services = () => {
   return (
     <section id="services" className="py-32 px-6 relative" style={{ background: "var(--gradient-subtle)" }}>
       <div className="container mx-auto">
-        <h2 className="text-5xl md:text-6xl font-black text-center mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-black text-center mb-5 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Our Services
         </h2>
-        <p className="text-center text-foreground/70 mb-20 max-w-3xl mx-auto text-xl font-light">
+        <p className="text-center text-foreground/70 mb-16 max-w-3xl mx-auto text-lg font-light">
           We offer a comprehensive suite of digital marketing services designed to elevate your brand and drive growth
         </p>
 
@@ -55,7 +55,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-[0_0_50px_rgba(0,200,255,0.3)] transition-all duration-500 hover:-translate-y-3 border border-border/50 hover:border-primary/70 relative overflow-hidden"
+              className="group hover:shadow-xl transition-all duration-500 hover:-translate-y-3 border border-border/50 hover:border-primary/70 relative overflow-hidden"
               style={{ 
                 background: "var(--gradient-card)",
                 animationDelay: `${index * 0.1}s` 
@@ -66,16 +66,16 @@ const Services = () => {
               
               <CardHeader className="relative z-10">
                 <div
-                  className={`w-20 h-20 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-[0_0_30px_rgba(0,200,255,0.4)]`}
+                  className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}
                 >
-                  <service.icon className="w-10 h-10 text-background" />
+                  <service.icon className="w-8 h-8 text-background" />
                 </div>
-                <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="relative z-10">
-                <CardDescription className="text-base text-foreground/70 leading-relaxed">
+                <CardDescription className="text-foreground/70 leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardContent>

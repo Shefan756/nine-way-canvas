@@ -49,7 +49,7 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="9waymedia Solutions" 
-              className="h-14 w-auto drop-shadow-[0_0_15px_rgba(0,200,255,0.3)]" 
+              className="h-12 w-auto" 
             />
           </div>
 

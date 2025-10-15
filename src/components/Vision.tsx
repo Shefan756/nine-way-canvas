@@ -10,19 +10,19 @@ const Vision = () => {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <h2 className="text-5xl md:text-6xl font-black text-center mb-20 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Vision & Aim
         </h2>
         <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-          <Card className="border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,200,255,0.2)] group" style={{ background: "var(--gradient-card)" }}>
+          <Card className="border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-lg group" style={{ background: "var(--gradient-card)" }}>
             <CardHeader className="pb-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_30px_rgba(0,200,255,0.3)]">
-                <Lightbulb className="w-10 h-10 text-background" />
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                <Lightbulb className="w-8 h-8 text-background" />
               </div>
-              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Our Vision</CardTitle>
+              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Our Vision</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/70 leading-relaxed text-lg">
+              <p className="text-foreground/70 leading-relaxed">
                 To be the leading digital marketing partner that empowers businesses to achieve
                 unprecedented growth through innovative strategies and creative excellence. We envision
                 a world where every brand can harness the full potential of digital platforms.
@@ -30,15 +30,15 @@ const Vision = () => {
             </CardContent>
           </Card>
 
-          <Card className="border border-border/50 hover:border-secondary/50 transition-all duration-500 hover:shadow-[0_0_40px_rgba(167,243,108,0.2)] group" style={{ background: "var(--gradient-card)" }}>
+          <Card className="border border-border/50 hover:border-secondary/50 transition-all duration-500 hover:shadow-lg group" style={{ background: "var(--gradient-card)" }}>
             <CardHeader className="pb-4">
-              <div className="w-20 h-20 bg-gradient-to-br from-secondary to-primary rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_30px_rgba(167,243,108,0.3)]">
-                <Target className="w-10 h-10 text-background" />
+              <div className="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500 shadow-lg">
+                <Target className="w-8 h-8 text-background" />
               </div>
-              <CardTitle className="text-3xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Our Aim</CardTitle>
+              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Our Aim</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/70 leading-relaxed text-lg">
+              <p className="text-foreground/70 leading-relaxed">
                 To deliver exceptional digital marketing solutions that drive measurable results. We aim
                 to build lasting relationships with our clients by consistently exceeding expectations
                 and helping them navigate the ever-evolving digital landscape with confidence.

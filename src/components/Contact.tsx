@@ -37,40 +37,40 @@ const Contact = () => {
       </div>
 
       <div className="container mx-auto max-w-5xl relative z-10">
-        <h2 className="text-5xl md:text-6xl font-black text-center mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+        <h2 className="text-4xl md:text-5xl font-black text-center mb-5 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
           Get In Touch
         </h2>
-        <p className="text-center text-foreground/70 mb-20 text-xl font-light">
+        <p className="text-center text-foreground/70 mb-16 text-lg font-light">
           Ready to transform your digital presence? Connect with us today
         </p>
 
         <div className="grid md:grid-cols-2 gap-16 mb-20">
           <div>
-            <h3 className="text-3xl font-bold mb-8 text-foreground">Contact Information</h3>
+            <h3 className="text-2xl font-bold mb-7 text-foreground">Contact Information</h3>
             <div className="space-y-6">
               <a
                 href="mailto:info@9waymedia.com"
                 className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(0,200,255,0.3)] group-hover:scale-110 transition-transform duration-300">
-                  <Mail className="w-8 h-8 text-background" />
+                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Mail className="w-7 h-7 text-background" />
                 </div>
-                <span className="text-lg">info@9waymedia.com</span>
+                <span>info@9waymedia.com</span>
               </a>
               <a
                 href="tel:+1234567890"
                 className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(167,243,108,0.3)] group-hover:scale-110 transition-transform duration-300">
-                  <Phone className="w-8 h-8 text-background" />
+                <div className="w-14 h-14 bg-gradient-to-br from-secondary to-primary rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <Phone className="w-7 h-7 text-background" />
                 </div>
-                <span className="text-lg">+123 456 7890</span>
+                <span>+123 456 7890</span>
               </a>
             </div>
           </div>
 
           <div>
-            <h3 className="text-3xl font-bold mb-8 text-foreground">Follow Us</h3>
+            <h3 className="text-2xl font-bold mb-7 text-foreground">Follow Us</h3>
             <div className="flex flex-wrap gap-5">
               {socialLinks.map((social) => (
                 <a
