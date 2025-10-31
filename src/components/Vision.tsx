@@ -1,48 +1,42 @@
-import { Target, Lightbulb } from "lucide-react";
+import { Target, Rocket } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Vision = () => {
   return (
-    <section id="vision" className="py-32 px-6 relative overflow-hidden" style={{ background: "var(--gradient-subtle)" }}>
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full blur-3xl" />
-      </div>
-
+    <section id="vision" className="py-20 px-6 relative overflow-hidden" style={{ background: "var(--gradient-card)" }}>
       <div className="container mx-auto relative z-10">
-        <h2 className="text-4xl md:text-5xl font-black text-center mb-16 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          Vision & Aim
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">
+          Vision & <span className="text-primary">Mission</span>
         </h2>
-        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-          <Card className="border border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-lg group" style={{ background: "var(--gradient-card)" }}>
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <Card className="border border-border/50 hover:border-primary/50 transition-all duration-300 group bg-card/50 backdrop-blur-sm">
             <CardHeader className="pb-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                <Lightbulb className="w-8 h-8 text-background" />
+              <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Target className="w-7 h-7 text-background" />
               </div>
-              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Our Vision</CardTitle>
+              <CardTitle className="text-xl font-bold text-foreground">Our Vision</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/70 leading-relaxed">
-                To be the leading digital marketing partner that empowers businesses to achieve
-                unprecedented growth through innovative strategies and creative excellence. We envision
-                a world where every brand can harness the full potential of digital platforms.
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                To empower every business — small or large — to build a powerful online presence through creativity, strategy, and innovation. We aim to be recognized as one of India's most trusted and result-driven digital marketing agencies.
               </p>
             </CardContent>
           </Card>
 
-          <Card className="border border-border/50 hover:border-secondary/50 transition-all duration-500 hover:shadow-lg group" style={{ background: "var(--gradient-card)" }}>
+          <Card className="border border-border/50 hover:border-secondary/50 transition-all duration-300 group bg-card/50 backdrop-blur-sm">
             <CardHeader className="pb-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-secondary to-primary rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                <Target className="w-8 h-8 text-background" />
+              <div className="w-14 h-14 bg-gradient-to-br from-secondary to-primary rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Rocket className="w-7 h-7 text-background" />
               </div>
-              <CardTitle className="text-2xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">Our Aim</CardTitle>
+              <CardTitle className="text-xl font-bold text-foreground">Our Mission</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-foreground/70 leading-relaxed">
-                To deliver exceptional digital marketing solutions that drive measurable results. We aim
-                to build lasting relationships with our clients by consistently exceeding expectations
-                and helping them navigate the ever-evolving digital landscape with confidence.
-              </p>
+              <ul className="text-sm text-muted-foreground leading-relaxed space-y-2">
+                <li>• Help brands connect with their audience through meaningful digital experiences</li>
+                <li>• Provide customized marketing solutions that deliver measurable results</li>
+                <li>• Continuously innovate and stay ahead in the fast-changing digital world</li>
+                <li>• Build long-term relationships based on trust, creativity, and performance</li>
+              </ul>
             </CardContent>
           </Card>
         </div>

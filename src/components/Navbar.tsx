@@ -9,7 +9,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      const sections = ["home", "vision", "services", "contact"];
+      const sections = ["home", "about", "vision", "services", "why-choose-us", "founders", "contact"];
       const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -53,11 +53,12 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="flex gap-10">
+          <div className="flex gap-8">
             {[
               { id: "home", label: "Home" },
-              { id: "vision", label: "Vision & Aim" },
+              { id: "about", label: "About" },
               { id: "services", label: "Services" },
+              { id: "founders", label: "Founders" },
               { id: "contact", label: "Contact" },
             ].map((item) => (
               <button

@@ -19,13 +19,13 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto text-center relative z-10">
-        <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-fade-in leading-tight">
+        <h1 className="text-4xl md:text-6xl font-black mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent animate-fade-in leading-tight">
           Transform Your
           <br />
-          <span className="text-6xl md:text-8xl">Digital Presence</span>
+          <span className="text-5xl md:text-7xl">Digital Presence</span>
         </h1>
-        <p className="text-lg md:text-xl text-foreground/75 mb-10 max-w-3xl mx-auto animate-fade-in-up font-light leading-relaxed">
-          Elevate your brand with cutting-edge digital marketing solutions that drive real results
+        <p className="text-base md:text-lg text-foreground/80 mb-10 max-w-3xl mx-auto animate-fade-in-up font-light leading-relaxed">
+          We are a passionate digital marketing agency helping businesses grow their online presence through creativity, strategy, and innovation.
         </p>
         <Button
           onClick={scrollToServices}

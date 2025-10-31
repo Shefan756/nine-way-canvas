@@ -1,103 +1,107 @@
 import { Instagram, Linkedin, Facebook, Twitter, Mail, Phone } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   const socialLinks = [
     {
       name: "Instagram",
       icon: Instagram,
-      url: "#",
-      color: "hover:text-pink-500",
+      url: "https://www.instagram.com/9waymediasolutions",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
       url: "#",
-      color: "hover:text-blue-600",
     },
     {
       name: "Facebook",
       icon: Facebook,
       url: "#",
-      color: "hover:text-blue-500",
     },
     {
       name: "Twitter",
       icon: Twitter,
       url: "#",
-      color: "hover:text-sky-400",
     },
   ];
 
   return (
-    <section id="contact" className="py-32 px-6 relative overflow-hidden" style={{ background: "var(--gradient-subtle)" }}>
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary rounded-full blur-3xl" />
-      </div>
-
+    <section id="contact" className="py-20 px-6 relative overflow-hidden" style={{ background: "var(--gradient-card)" }}>
       <div className="container mx-auto max-w-5xl relative z-10">
-        <h2 className="text-4xl md:text-5xl font-black text-center mb-5 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          Get In Touch
-        </h2>
-        <p className="text-center text-foreground/70 mb-16 text-lg font-light">
-          Ready to transform your digital presence? Connect with us today
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-foreground">
+            Let's Connect | <span className="text-primary">हमसे जुड़ें</span>
+          </h2>
+          <p className="text-sm text-muted-foreground">
+            Ready to grow your business with 9 Way Media Solutions?<br />
+            📩 Let's discuss your project today!
+          </p>
+        </div>
 
-        <div className="grid md:grid-cols-2 gap-16 mb-20">
-          <div>
-            <h3 className="text-2xl font-bold mb-7 text-foreground">Contact Information</h3>
-            <div className="space-y-6">
-              <a
-                href="mailto:info@9waymedia.com"
-                className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-all duration-300 group"
-              >
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Mail className="w-7 h-7 text-background" />
-                </div>
-                <span>info@9waymedia.com</span>
-              </a>
-              <a
-                href="tel:+1234567890"
-                className="flex items-center gap-4 text-foreground/70 hover:text-primary transition-all duration-300 group"
-              >
-                <div className="w-14 h-14 bg-gradient-to-br from-secondary to-primary rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <Phone className="w-7 h-7 text-background" />
-                </div>
-                <span>+123 456 7890</span>
-              </a>
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                <Mail className="w-6 h-6 text-background" />
+              </div>
+              <div>
+                <h3 className="text-base font-bold text-foreground mb-1">Email Us</h3>
+                <a
+                  href="mailto:info@9waymediasolutions.com"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  info@9waymediasolutions.com
+                </a>
+              </div>
             </div>
           </div>
 
-          <div>
-            <h3 className="text-2xl font-bold mb-7 text-foreground">Follow Us</h3>
-            <div className="flex flex-wrap gap-5">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group"
-                  aria-label={social.name}
-                >
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className={`w-16 h-16 p-0 border-2 border-border/50 hover:border-primary/70 transition-all duration-500 ${social.color} hover:shadow-[0_0_30px_rgba(0,200,255,0.3)] hover:scale-110`}
-                    style={{ background: "var(--gradient-card)" }}
+          <div className="p-6 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-lg flex items-center justify-center">
+                <Phone className="w-6 h-6 text-background" />
+              </div>
+              <div>
+                <h3 className="text-base font-bold text-foreground mb-1">Call / WhatsApp</h3>
+                <div className="flex flex-col gap-1">
+                  <a
+                    href="tel:+919281468846"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    <social.icon className="w-7 h-7" />
-                  </Button>
-                </a>
-              ))}
+                    +91 92814 68846
+                  </a>
+                  <a
+                    href="tel:+918200224864"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    +91 82002 24864
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="text-center pt-12 border-t border-border/30">
-          <p className="text-foreground/60 text-lg">
-            © {new Date().getFullYear()} 9waymedia Solutions. All rights reserved.
+        <div className="p-8 rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm mb-12">
+          <h3 className="text-lg font-bold text-center mb-6 text-foreground">Connect With Us</h3>
+          <div className="flex justify-center gap-6">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 rounded-lg bg-primary/10 hover:bg-primary/20 transition-all duration-300 hover:scale-110 group"
+                aria-label={social.name}
+              >
+                <social.icon className="w-6 h-6 text-primary group-hover:text-primary/80" />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="text-center pt-8 border-t border-border/30">
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} 9 Way Media Solutions. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,81 +1,77 @@
-import { FileImage, Globe, Instagram, Youtube, MessageSquare, Megaphone } from "lucide-react";
+import { Share2, Palette, Globe, Megaphone, Camera, Pencil } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Services = () => {
   const services = [
     {
-      title: "Digital Marketing",
-      description: "Comprehensive digital marketing strategies to boost your online presence",
-      icon: Megaphone,
+      title: "Social Media Marketing",
+      description: "Create, post & promote your brand on platforms like Instagram, Facebook & more",
+      icon: Share2,
       gradient: "from-primary to-secondary",
     },
     {
-      title: "Poster Creation",
-      description: "Eye-catching posters designed to capture attention and drive engagement",
-      icon: FileImage,
+      title: "Graphic Design & Branding",
+      description: "Eye-catching posts, logos, and complete brand identity",
+      icon: Palette,
       gradient: "from-secondary to-primary",
     },
     {
-      title: "Website Creation",
-      description: "Professional, responsive websites tailored to your business needs",
+      title: "Website Design & Development",
+      description: "Modern, mobile-friendly, and SEO-ready websites",
       icon: Globe,
       gradient: "from-primary to-accent",
     },
     {
-      title: "Instagram Content",
-      description: "Engaging Instagram posts and stories that resonate with your audience",
-      icon: Instagram,
+      title: "Google & Meta Ads Management",
+      description: "Run paid ads that actually deliver results",
+      icon: Megaphone,
       gradient: "from-secondary to-primary",
     },
     {
-      title: "YouTube Content",
-      description: "Compelling video content creation and optimization for YouTube",
-      icon: Youtube,
+      title: "Photography & Video Editing",
+      description: "Showcase your products and services with professional visuals",
+      icon: Camera,
       gradient: "from-primary to-secondary",
     },
     {
-      title: "WhatsApp Marketing",
-      description: "Creative WhatsApp posters and status updates for direct engagement",
-      icon: MessageSquare,
+      title: "Content Creation",
+      description: "Creative ideas that connect with your audience",
+      icon: Pencil,
       gradient: "from-accent to-primary",
     },
   ];
 
   return (
-    <section id="services" className="py-32 px-6 relative" style={{ background: "var(--gradient-subtle)" }}>
+    <section id="services" className="py-20 px-6 relative" style={{ background: "var(--gradient-subtle)" }}>
       <div className="container mx-auto">
-        <h2 className="text-4xl md:text-5xl font-black text-center mb-5 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-          Our Services
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 text-foreground">
+          Our <span className="text-primary">Services</span>
         </h2>
-        <p className="text-center text-foreground/70 mb-16 max-w-3xl mx-auto text-lg font-light">
-          We offer a comprehensive suite of digital marketing services designed to elevate your brand and drive growth
+        <p className="text-center text-muted-foreground mb-12 text-sm">
+          💼 Comprehensive digital solutions for your business
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group hover:shadow-xl transition-all duration-500 hover:-translate-y-3 border border-border/50 hover:border-primary/70 relative overflow-hidden"
-              style={{ 
-                background: "var(--gradient-card)",
-                animationDelay: `${index * 0.1}s` 
-              }}
+              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border border-border/50 hover:border-primary/50 relative overflow-hidden"
+              style={{ background: "var(--gradient-card)" }}
             >
-              {/* Hover gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               <CardHeader className="relative z-10">
                 <div
-                  className={`w-16 h-16 bg-gradient-to-br ${service.gradient} rounded-2xl flex items-center justify-center mb-5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}
+                  className={`w-14 h-14 bg-gradient-to-br ${service.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-all duration-300`}
                 >
-                  <service.icon className="w-8 h-8 text-background" />
+                  <service.icon className="w-7 h-7 text-background" />
                 </div>
-                <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                   {service.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="relative z-10">
-                <CardDescription className="text-foreground/70 leading-relaxed">
+                <CardDescription className="text-sm text-muted-foreground leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardContent>
