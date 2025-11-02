@@ -49,10 +49,8 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-600 ${
-        isScrolled
-          ? "dark:bg-background/80 dark:backdrop-blur-xl dark:shadow-2xl dark:border-b dark:border-border/50 light:bg-black light:text-white bg-black text-white shadow-2xl border-b border-black"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-600 bg-black text-white shadow-2xl border-b border-black dark:bg-background/80 dark:backdrop-blur-xl dark:shadow-2xl dark:border-b dark:border-border/50 ${
+        isScrolled ? "" : ""
       }`}
     >
       <div className="container mx-auto px-6 py-5">
@@ -77,8 +75,8 @@ const Navbar = () => {
                   onClick={() => scrollToSection(item.id)}
                   className={`text-sm font-semibold tracking-wide transition-all duration-300 relative group ${
                     activeSection === item.id
-                      ? "text-primary"
-                      : "text-foreground/80 hover:text-primary"
+                      ? "dark:text-primary text-white"
+                      : "dark:text-foreground/80 dark:hover:text-primary text-white hover:text-gray-300"
                   }`}
                 >
                   {item.label}
@@ -110,8 +108,8 @@ const Navbar = () => {
                       onClick={() => scrollToSection(item.id)}
                       className={`text-lg font-semibold tracking-wide transition-all duration-300 text-left ${
                         activeSection === item.id
-                          ? "text-primary"
-                          : "text-foreground/80 hover:text-primary"
+                          ? "dark:text-primary text-white"
+                          : "dark:text-foreground/80 dark:hover:text-primary text-white hover:text-gray-300"
                       }`}
                     >
                       {item.label}
