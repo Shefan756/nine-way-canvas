@@ -41,6 +41,7 @@ const Navbar = () => {
   const menuItems = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
+    { id: "vision", label: "Vision" },
     { id: "services", label: "Services" },
     { id: "founders", label: "Founders" },
     { id: "contact", label: "Contact" },
