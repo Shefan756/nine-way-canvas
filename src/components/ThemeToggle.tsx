@@ -20,13 +20,14 @@ const ThemeToggle = () => {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-full"
+      className="rounded-full relative overflow-hidden"
     >
-      {theme === "dark" ? (
-        <Sun className="h-5 w-5 text-primary" />
-      ) : (
-        <Moon className="h-5 w-5 text-primary" />
-      )}
+      <Sun className={`h-5 w-5 text-primary absolute transition-all duration-500 ${
+        theme === "dark" ? "rotate-90 scale-0" : "rotate-0 scale-100"
+      }`} />
+      <Moon className={`h-5 w-5 text-primary absolute transition-all duration-500 ${
+        theme === "dark" ? "rotate-0 scale-100" : "-rotate-90 scale-0"
+      }`} />
     </Button>
   );
 };
