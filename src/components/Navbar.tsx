@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
 import logo from "@/assets/9waymedia-logo.jpg";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,12 +34,21 @@ const Navbar = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
     }
   };
 
+  const menuItems = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "services", label: "Services" },
+    { id: "founders", label: "Founders" },
+    { id: "contact", label: "Contact" },
+  ];
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-600 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-xl shadow-2xl border-b border-border/50"
           : "bg-transparent"
@@ -54,15 +67,10 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="flex items-center gap-8">
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8">
             <div className="flex gap-8">
-              {[
-                { id: "home", label: "Home" },
-                { id: "about", label: "About" },
-                { id: "services", label: "Services" },
-                { id: "founders", label: "Founders" },
-                { id: "contact", label: "Contact" },
-              ].map((item) => (
+              {menuItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
@@ -82,6 +90,35 @@ const Navbar = () => {
               ))}
             </div>
             <ThemeToggle />
+          </div>
+
+          {/* Mobile Menu */}
+          <div className="flex md:hidden items-center gap-3">
+            <ThemeToggle />
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="rounded-full">
+                  <Menu className="h-6 w-6 text-foreground" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-64">
+                <div className="flex flex-col gap-6 mt-8">
+                  {menuItems.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className={`text-lg font-semibold tracking-wide transition-all duration-300 text-left ${
+                        activeSection === item.id
+                          ? "text-primary"
+                          : "text-foreground/80 hover:text-primary"
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
