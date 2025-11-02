@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, TrendingUp, Target, Zap, MessageSquare, Share2, BarChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -16,6 +16,14 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+        
+        {/* Floating marketing icons */}
+        <TrendingUp className="absolute top-32 left-1/4 w-12 h-12 text-primary/20 animate-bounce" style={{ animationDuration: "3s" }} />
+        <Target className="absolute top-48 right-1/4 w-10 h-10 text-secondary/20 animate-bounce" style={{ animationDuration: "4s", animationDelay: "0.5s" }} />
+        <Zap className="absolute bottom-40 left-1/3 w-14 h-14 text-primary/15 animate-bounce" style={{ animationDuration: "3.5s", animationDelay: "1s" }} />
+        <MessageSquare className="absolute top-64 left-1/2 w-8 h-8 text-secondary/25 animate-bounce" style={{ animationDuration: "4.5s", animationDelay: "0.3s" }} />
+        <Share2 className="absolute bottom-56 right-1/3 w-11 h-11 text-primary/20 animate-bounce" style={{ animationDuration: "3.8s", animationDelay: "1.2s" }} />
+        <BarChart className="absolute top-40 right-1/3 w-9 h-9 text-secondary/18 animate-bounce" style={{ animationDuration: "4.2s", animationDelay: "0.8s" }} />
       </div>
 
       <div className="container mx-auto text-center relative z-10">

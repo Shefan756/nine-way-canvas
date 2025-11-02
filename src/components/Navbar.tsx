@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 import logo from "@/assets/9waymedia-logo.jpg";
 
 const Navbar = () => {
@@ -53,31 +54,34 @@ const Navbar = () => {
             />
           </div>
 
-          <div className="flex gap-8">
-            {[
-              { id: "home", label: "Home" },
-              { id: "about", label: "About" },
-              { id: "services", label: "Services" },
-              { id: "founders", label: "Founders" },
-              { id: "contact", label: "Contact" },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`text-sm font-semibold tracking-wide transition-all duration-300 relative group ${
-                  activeSection === item.id
-                    ? "text-primary"
-                    : "text-foreground/80 hover:text-primary"
-                }`}
-              >
-                {item.label}
-                <span 
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-300 ${
-                    activeSection === item.id ? "w-full" : "w-0 group-hover:w-full"
+          <div className="flex items-center gap-8">
+            <div className="flex gap-8">
+              {[
+                { id: "home", label: "Home" },
+                { id: "about", label: "About" },
+                { id: "services", label: "Services" },
+                { id: "founders", label: "Founders" },
+                { id: "contact", label: "Contact" },
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-sm font-semibold tracking-wide transition-all duration-300 relative group ${
+                    activeSection === item.id
+                      ? "text-primary"
+                      : "text-foreground/80 hover:text-primary"
                   }`}
-                />
-              </button>
-            ))}
+                >
+                  {item.label}
+                  <span 
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-300 ${
+                      activeSection === item.id ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </button>
+              ))}
+            </div>
+            <ThemeToggle />
           </div>
         </div>
       </div>
