@@ -55,18 +55,22 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <div 
-            className="flex items-center gap-3 cursor-pointer transition-transform duration-300 hover:scale-105" 
+          <div
+            className="flex items-center gap-2 sm:gap-3 cursor-pointer transition-transform duration-300 hover:scale-105"
             onClick={() => scrollToSection("home")}
           >
-            <img 
-              src={logo} 
-              alt="9waymedia Solutions" 
-              className="h-12 w-auto" 
+            <img
+              src={logo}
+              alt="9waymedia Solutions"
+              className="h-10 sm:h-12 w-auto"
             />
             <div className="flex flex-col">
-              <h1 className="text-2xl font-bold leading-tight tracking-wide">9 Way Media Solutions</h1>
-              <p className="text-xs font-medium text-center tracking-wide">AI based Digital Marketing Agency</p>
+              <h1 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight tracking-wide">
+                9 Way Media Solutions
+              </h1>
+              <p className="text-[10px] sm:text-xs font-medium text-center tracking-wide">
+                AI based Digital Marketing Agency
+              </p>
             </div>
           </div>
 
