@@ -64,6 +64,11 @@ const Navbar = () => {
               alt="9waymedia Solutions" 
               className="h-12 w-auto" 
             />
+            <div className="flex flex-col">
+              <h1 className="text-lg font-bold leading-tight">9 Way Media Solutions</h1>
+              <div className="h-px bg-gradient-to-r from-primary to-secondary w-full mb-0.5"></div>
+              <p className="text-xs text-muted-foreground">AI - based Digital Marketing Agency</p>
+            </div>
           </div>
 
           {/* Desktop Menu */}

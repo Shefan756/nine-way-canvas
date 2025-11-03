@@ -12,16 +12,6 @@ const Contact = () => {
       icon: Linkedin,
       url: "#",
     },
-    {
-      name: "Facebook",
-      icon: Facebook,
-      url: "#",
-    },
-    {
-      name: "Twitter",
-      icon: Twitter,
-      url: "#",
-    },
   ];
 
   return (
