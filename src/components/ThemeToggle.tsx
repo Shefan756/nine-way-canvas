@@ -20,7 +20,7 @@ const ThemeToggle = () => {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-full relative overflow-hidden"
+      className="rounded-full relative overflow-hidden hover:bg-transparent"
     >
       <Sun className={`h-5 w-5 text-primary absolute transition-all duration-500 ${
         theme === "dark" ? "rotate-90 scale-0" : "rotate-0 scale-100"

@@ -53,7 +53,7 @@ const Navbar = () => {
         isScrolled ? "" : ""
       }`}
     >
-      <div className="container mx-auto px-6 py-5">
+      <div className="container mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
           <div
             className="flex items-center gap-2 sm:gap-3 cursor-pointer transition-transform duration-300 hover:scale-105"
@@ -65,10 +65,10 @@ const Navbar = () => {
               className="h-10 sm:h-12 w-auto"
             />
             <div className="flex flex-col">
-              <h1 className="text-[13px] sm:text-lg md:text-2xl lg:text-3xl font-bold leading-tight tracking-wide whitespace-nowrap">
+              <h1 className="text-sm md:text-base lg:text-lg font-bold leading-tight tracking-wide whitespace-nowrap">
                 9 Way Media Solutions
               </h1>
-              <p className="text-[10px] sm:text-xs md:text-base lg:text-lg font-medium text-center tracking-wide whitespace-nowrap">
+              <p className="text-[8px] md:text-[9px] lg:text-[11px] font-medium text-center tracking-wide whitespace-nowrap">
                 AI Based Digital Marketing Agency
               </p>
             </div>
