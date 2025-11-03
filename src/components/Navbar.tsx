@@ -65,8 +65,8 @@ const Navbar = () => {
               className="h-12 w-auto" 
             />
             <div className="flex flex-col">
-              <h1 className="text-2xl font-extrabold leading-tight">9 Way Media Solutions</h1>
-              <p className="text-xs font-light text-center">AI based Digital Marketing Agency</p>
+              <h1 className="text-2xl font-bold leading-tight tracking-wide">9 Way Media Solutions</h1>
+              <p className="text-xs font-medium text-center tracking-wide">AI based Digital Marketing Agency</p>
             </div>
           </div>
 
