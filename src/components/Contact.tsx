@@ -5,12 +5,12 @@ const Contact = () => {
     {
       name: "Instagram",
       icon: Instagram,
-      url: "https://www.instagram.com/9waymediasolutions",
+      url: "https://www.instagram.com/9waymedia?utm_source=ig_web_button_share_sheet&igsh=MWZrd3YxamlzdjJlaQ==",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "#",
+      url: "https://www.linkedin.com/company/9-way-media-solutions/",
     },
   ];
 
