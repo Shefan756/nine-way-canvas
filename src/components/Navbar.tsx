@@ -65,10 +65,10 @@ const Navbar = () => {
               className="h-10 sm:h-12 w-auto"
             />
             <div className="flex flex-col">
-              <h1 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight tracking-wide">
+              <h1 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold leading-tight tracking-wide">
                 9 Way Media Solutions
               </h1>
-              <p className="text-[10px] sm:text-xs font-medium text-center tracking-wide">
+              <p className="text-[10px] sm:text-[11px] md:text-xs lg:text-sm font-medium text-center tracking-wide">
                 AI based Digital Marketing Agency
               </p>
             </div>
