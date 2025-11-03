@@ -105,7 +105,7 @@ const Navbar = () => {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="rounded-full">
-                  <Menu className="h-6 w-6 text-foreground" />
+                  <Menu className="h-6 w-6 text-white dark:text-foreground" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-64">
@@ -116,8 +116,8 @@ const Navbar = () => {
                       onClick={() => scrollToSection(item.id)}
                       className={`text-lg font-semibold tracking-wide transition-all duration-300 text-left ${
                         activeSection === item.id
-                          ? "dark:text-primary text-white"
-                          : "dark:text-foreground/80 dark:hover:text-primary text-white hover:text-gray-300"
+                          ? "dark:text-primary text-primary"
+                          : "dark:text-foreground/80 dark:hover:text-primary text-foreground hover:text-primary"
                       }`}
                     >
                       {item.label}
